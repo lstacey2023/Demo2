@@ -24,14 +24,14 @@ namespace OrderBot
             switch (this.nCur)
             {
                 case State.WELCOMING:
-                    aMessages.Add("Welcome to Rich's Shawarama!");
-                    aMessages.Add("What size would you like?");
+                    aMessages.Add("Welcome to Liz's Korean BBQ!");
+                    aMessages.Add("What appetizer would you like?");
                     this.nCur = State.SIZE;
                     break;
                 case State.SIZE:
                     this.oOrder.Size = sInMessage;
                     this.oOrder.Save();
-                    aMessages.Add("What protein would you like on this  " + this.oOrder.Size + " Shawarama?");
+                    aMessages.Add("What protein would you like on this  " + this.oOrder.Size + " Korean BBQ?");
                     this.nCur = State.PROTEIN;
                     break;
                 case State.PROTEIN:
